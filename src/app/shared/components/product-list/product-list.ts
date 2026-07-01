@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './product-list.html',
   styleUrl: './product-list.scss',
 })
@@ -13,21 +14,21 @@ export class ProductList {
         "description": "Eine ergonomische Gaming-Maus mit hoher Präzision und einstellbarer DPI. Ideal für FPS- und MOBA-Spiele, bietet sie eine langlebige Bauweise und komfortable Seitentasten für schnelles Reagieren.",
         "specs": "dpi: 6400, cable length: 1.8m, color: Schwarz",
         "stock": 120,
-        "price": 25.90
+        "price": 25.99
     },
     {
       "name": "USB-C Kabel",
       "description": "Robustes Ladekabel für Smartphones, Tablets und Laptops. Unterstützt schnelles Laden und Datenübertragung. Perfekt für den täglichen Einsatz zu Hause, im Bürooder unterwegs.",
       "specs": "length: 1m, color: Weiß, type: USB-C zu USB-A",
       "stock": 300,
-      "price": 48.00
+      "price": 48.55
     },
     {
       "name": "Mechanische Tastatur",
       "description": "Hochwertige mechanische Tastatur mit RGB-Hintergrundbeleuchtung. Dieschnellen Switches sorgen für präzise Eingaben und langen Schreibkomfort. Ideal für Gamerund Vielschreiber.",
       "specs": "switches: Red, connection: USB, color: Schwarz",
       "stock": 85,
-      "price": 79.90
+      "price": 79.95
     },
     {
       "name": "HDMI Kabel",
