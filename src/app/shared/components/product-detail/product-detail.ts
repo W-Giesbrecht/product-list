@@ -14,13 +14,7 @@ export class ProductDetail {
   productService = inject(Products);
   
 
-  detail = {
-    name: 'n/a',
-    description: 'n/a',
-    specs: 'n/a',
-    stock: 0,
-    price: 0,
-  }
+  detail = this.productService.productDetail;
 
   ngOnInit() {
     let currentName = this.route.snapshot.paramMap.get('name');
@@ -29,6 +23,6 @@ export class ProductDetail {
   }
 
   deleteDetail() {
-    this.detail.name = "";
+    //this.detail.name = "";
   }
 }

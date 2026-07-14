@@ -1,23 +1,25 @@
-import { Service } from '@angular/core';
+import { Service, signal } from '@angular/core';
 import { Product } from '../interfaces/product';
 
 @Service()
 export class Products {
   productList: Product[] = [];
 
-  productDetail: Product = {
+  productDetail = signal<Product>({
     name: 'n/a',
     description: 'n/a',
     specs: 'n/a',
     stock: 0,
     price: 0,
-  };
+  });
 
   setProductDetailByName(name: string) {
     let tmpProduct = this.productList.find((product) => product.name == name);
-    if (tmpProduct) {
-      this.productDetail = tmpProduct;
-    }
+    if (tmpProduct) this.productDetail.set(tmpProduct);
+
+    setTimeout(() => {
+      this.productDetail.update( product => ({...product, description: "Updated description after 2 seconds"}));
+    }, 2000);
   }
 
   constructor() {
